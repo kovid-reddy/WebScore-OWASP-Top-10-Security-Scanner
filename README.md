@@ -1,5 +1,23 @@
+// Banner
 <p align="center">
   <img src="demo-assets/banner.png" alt="WebScore Banner" width="100%">
+</p>
+
+// Badges
+<p align="center">
+
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+
+<img src="https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/OWASP%20Top%2010-Security-critical?style=for-the-badge&color=8A2BE2"/>
+
 </p>
 
 # 🛡️ WebScore: OWASP Top 10 Security Scanner
