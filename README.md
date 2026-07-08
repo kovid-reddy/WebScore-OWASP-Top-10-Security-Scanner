@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="demo-assets/banner.png" alt="WebScore Banner" width="100%">
+</p>
+
 # 🛡️ WebScore: OWASP Top 10 Security Scanner
 
 WebScore is a monorepo-based web vulnerability scanner and assessment platform. It executes passive and active security checks against target websites and APIs, computes a risk-adjusted security score (from 0 to 100), and provides actionable remediation steps for detected issues.
