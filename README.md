@@ -369,6 +369,26 @@ The security score (from **0 to 100**) indicates the security posture of the tar
 
 ---
 
+# ⚙️ Tech Stack
+
+<div align="center">
+
+| Layer | Technologies |
+|:------|:-------------|
+| 🎨 **Frontend** | React • TypeScript • Tailwind CSS |
+| ⚙️ **Backend API** | Fastify • Node.js |
+| 🔍 **Scanner Engine** | Node.js • Axios • Puppeteer |
+| 🗄️ **Database** | PostgreSQL • Prisma ORM |
+| 📬 **Queue System** | BullMQ • Redis |
+| ☁️ **Deployment** | Docker • Render |
+| 🏗️ **Architecture** | Turborepo Monorepo |
+
+</div>
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=react,ts,nodejs,fastify,postgres,docker,redis,git"/>
+</p>
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -451,4 +471,14 @@ The project includes a `render.yaml` blueprint for easy deployment on Render:
 ## ⚖️ Legal Disclaimer
 
 > [!WARNING]
-> This tool is designed for security assessment and testing purposes only. You must **only** scan targets that you own or have explicit, written permission to test. Unauthorized scanning of third-party websites or APIs is illegal and a violation of computer fraud laws. The developers of WebScore assume no liability for misuse of this tool.
+> **WebScore** is intended solely for authorized security testing, research, and educational purposes.
+>
+> Only scan systems, applications, or APIs that you own or have explicit written permission to assess. Unauthorized security testing may violate applicable laws and regulations.
+>
+> The authors and contributors of WebScore are **not responsible** for any misuse, unauthorized activity, or damages resulting from the use of this software.
+
+> 💙 Please use WebScore responsibly and help make the web a safer place.
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
