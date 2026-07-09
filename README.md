@@ -481,4 +481,6 @@ The project includes a `render.yaml` blueprint for easy deployment on Render:
 
 ## 📜 License
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+This project is currently **not licensed for public reuse or redistribution**.
+
+All rights reserved © Kovid Reddy Kontham.
