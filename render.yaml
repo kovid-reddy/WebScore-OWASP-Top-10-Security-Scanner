@@ -1,4 +1,15 @@
+databases:
+  - name: vuln-scanner-db
+    databaseName: vulnscanner
+    user: postgres
+    plan: free
+
 services:
+  - type: redis
+    name: vuln-scanner-redis
+    plan: free
+    ipAllowList: [] # Access restricted to internal services
+
   - type: web
     name: vuln-scanner-api
     runtime: node
@@ -13,8 +24,34 @@ services:
       - key: PORT
         value: 4000
       - key: DATABASE_URL
-        sync: false
+        fromDatabase:
+          name: vuln-scanner-db
+          property: connectionString
       - key: REDIS_URL
-        sync: false
+        fromService:
+          type: redis
+          name: vuln-scanner-redis
+          property: connectionString
       - key: FRONTEND_URL
-        value: https://vuln-scanner-web.vercel.app
+        sync: false # You will enter your Vercel URL here
+
+  - type: worker
+    name: vuln-scanner-worker
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: .
+    buildCommand: pnpm install && cd apps/api && npx prisma generate
+    startCommand: cd apps/api && npx tsx src/queue/scan.worker.ts
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: vuln-scanner-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: vuln-scanner-redis
+          property: connectionString
